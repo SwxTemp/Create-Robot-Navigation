@@ -32,6 +32,9 @@ https://cdn-shop.adafruit.com/datasheets/create_2_Open_Interface_Spec.pdf
 ROS2:
 https://docs.ros.org/en/galactic/index.html
 
+做完发现还有一个包是：https://github.com/MomsFriendlyRobotCompany/pycreate2 
+不太清楚这个是否可以驱动，留作备用
+
 ## Setup Steps for Create 2
 
 - Install ROS2
@@ -39,5 +42,7 @@ https://docs.ros.org/en/galactic/index.html
 - Followe instruction in https://github.com/AutonomyLab/create_robot Install
 
 - Build successfully(Remember to set ROS env correctly!)
+
+- Run bringup: `ros2 launch create_bringup create_2.launch`
 
 - Using teleop_test.py to control via cmd_vel topic
