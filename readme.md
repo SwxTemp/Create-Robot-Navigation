@@ -13,7 +13,7 @@
  
 ### TODO
 - 使用树莓派
-  - 在树莓派的SD卡上重新安装系统，最好是Ubuntu 2004: https://ubuntu.com/download/raspberry-pi
+  - 在树莓派的SD卡上重新安装系统，最好是Ubuntu 2004: https://ubuntu.com/download/raspberry-pi, connect to wifi: https://ubuntuforums.org/showthread.php?t=249654
   - 在树莓派中安装ROS2（其他组使用ROS1，可能还需要设置ROS bridge）: https://docs.ros.org/en/galactic/Installation.html
 - 安装雷达
   - 实现雷达与Laptop或者树莓派的正常连接:https://www.youtube.com/watch?v=WVyJjxAyGJc
