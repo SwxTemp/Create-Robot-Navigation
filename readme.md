@@ -1,5 +1,25 @@
 # Create 
 
+## 4.18 Update
+
+### Done
+- Setup Pi
+- Setup create2 with Pi
+- Setup Lidar with Pi
+- Done mapping, still working on details
+
+### TODO
+[] Integration
+  - Using turtlebot3 packages
+    - Error
+  - Using Rubin's link
+    - It is ROS 2
+   
+[] Adding frames
+
+[] Write navigation calling code, input some str which presenting tags. Automatically navigate the robot.
+  
+
 ## 4.16 Update
 ### 目前进度
 - 设置扫地机器人
