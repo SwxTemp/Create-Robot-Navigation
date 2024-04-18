@@ -18,6 +18,8 @@
 - 安装雷达
   - 实现雷达与Laptop或者树莓派的正常连接:https://www.youtube.com/watch?v=WVyJjxAyGJc
   - 安装Driver，可以正常使用雷达功能
+  - `roslaunch rplidar_ros view_rplidar_a1.launch`
+  - 
 - 集成树莓派+机器人+雷达
   - 实现基于给定地图的Navi
 
