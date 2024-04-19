@@ -14,6 +14,7 @@
     - Error
   - Using Rubin's link
     - It is ROS 2
+    - https://hackaday.io/project/98624-autonomous-slam-with-a-roomba 
    
 [] Adding frames
 
