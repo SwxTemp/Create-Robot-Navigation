@@ -17,10 +17,10 @@ This is for create 3 but should still be applicable to create 2
 ## 4.18 Update
 
 ### Done
-- Setup Pi
-- Setup create2 with Pi
-- Setup Lidar with Pi
-- Done mapping, still working on details
+- [x] Setup Pi
+- [x] Setup create2 with Pi
+- [x] Setup Lidar with Pi
+- [x] Done mapping, still working on details
 
 ### TODO
 - [ ] Integration
