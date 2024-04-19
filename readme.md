@@ -2,15 +2,15 @@
 
 ### Links from Zubin
 
-How do we add LIDAR to a ROS robot? (youtube.com)
+How do we add LIDAR to a ROS robot? (youtube.com) https://www.youtube.com/watch?v=eJZXRncGaGM 
 
-Easy SLAM with ROS using slam_toolbox (youtube.com)
+Easy SLAM with ROS using slam_toolbox (youtube.com) https://www.youtube.com/watch?v=ZaiA3hWaRzE 
  
 These are also done in ROS 2 but the idea is the same. Seems like your group has successfully gotten the lidar to communicate with ROS, now you need to find which SLAM algorithm will work best for you guys
 
 ---
 
-create3_examples/create3_lidar at galactic · iRobotEducation/create3_examples · GitHub
+create3_examples/create3_lidar at galactic · iRobotEducation/create3_examples · GitHub https://github.com/iRobotEducation/create3_examples/tree/galactic/create3_lidar 
  
 This is for create 3 but should still be applicable to create 2
 
