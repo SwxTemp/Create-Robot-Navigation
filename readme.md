@@ -23,16 +23,16 @@ This is for create 3 but should still be applicable to create 2
 - Done mapping, still working on details
 
 ### TODO
-[] Integration
+- [ ] Integration
   - Using turtlebot3 packages
     - Error
   - Using Rubin's link
     - It is ROS 2
     - https://hackaday.io/project/98624-autonomous-slam-with-a-roomba 
    
-[] Adding frames
+- [ ] Adding frames
 
-[] Write navigation calling code, input some str which presenting tags. Automatically navigate the robot.
+- [ ] Write navigation calling code, input some str which presenting tags. Automatically navigate the robot.
   
 
 ## 4.16 Update
