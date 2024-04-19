@@ -1,5 +1,19 @@
 # Create 
 
+### Links from Zubin
+
+How do we add LIDAR to a ROS robot? (youtube.com)
+
+Easy SLAM with ROS using slam_toolbox (youtube.com)
+ 
+These are also done in ROS 2 but the idea is the same. Seems like your group has successfully gotten the lidar to communicate with ROS, now you need to find which SLAM algorithm will work best for you guys
+
+---
+
+create3_examples/create3_lidar at galactic · iRobotEducation/create3_examples · GitHub
+ 
+This is for create 3 but should still be applicable to create 2
+
 ## 4.18 Update
 
 ### Done
@@ -69,3 +83,4 @@ https://docs.ros.org/en/galactic/index.html
 - Run bringup: `ros2 launch create_bringup create_2.launch`
 
 - Using teleop_test.py to control via cmd_vel topic
+
