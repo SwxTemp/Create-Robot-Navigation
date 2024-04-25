@@ -2,26 +2,52 @@
 
 ## 4.24 Update
 
-#### Hardware Setup
-- Connected and powered Raspberry Pi, iRobot Create2, and LIDAR A1.
-- Mounted the LIDAR optimally on the robot for unobstructed field of view.
-
 #### ROS Package Installation
 - Installed `gmapping`, `navigation`, `robot_localization`, and `amcl` packages.
 
 #### URDF Model Configuration
+- Add a new package `my_robot_description`
 - Configured and tested the URDF model including the LIDAR sensor.
 - Visualized the model using RViz on a laptop through X11 forwarding.
 
 #### Map Creation
-- Created a map using the LIDAR with `gmapping` by manually navigating the robot.
-- Saved the map using the `map_server` package.
+- Created a map server
+- Add the map using the `map_server` package.
 
 #### Navigation Stack Setup
 - Configured the `move_base` node with necessary parameters for path planning.
 - Set up `AMCL` for localization with adjusted parameters for the robot.
 - Configured `robot_localization` to fuse data from IMU, encoders, and LIDAR.
 - Developed launch files to initiate map server, AMCL, `move_base`, and sensor drivers.
+- All in this package:
+```
+my_robot_description/
+│
+├── config/                 # Directory for configuration files
+│   ├── amcl_params.yaml
+│   ├── costmap_common_params.yaml
+│   ├── global_costmap_params.yaml
+│   ├── local_costmap_params.yaml
+│   ├── base_local_planner_params.yaml
+│   └── ekf_params.yaml     # If using robot_localization
+│
+├── launch/                 # Directory for launch files
+│   ├── navigation.launch
+│   ├── amcl.launch.xml
+│   └── move_base.launch.xml
+│
+├── maps/                   # Directory for storing map files
+│   ├── your_map.yaml
+│   └── your_map.pgm
+│
+├── urdf/                   # Directory for URDF files
+│   ├── create2_with_lidar.urdf.xacro
+│   └── create2_with_lidar.urdf
+│
+├── CMakeLists.txt          # Standard CMake list file for building ROS packages
+└── package.xml             # Package information and dependencies
+
+```
 
 
 
