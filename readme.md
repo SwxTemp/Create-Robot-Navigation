@@ -1,5 +1,31 @@
 # Create 
 
+## 4.24 Update
+
+#### Hardware Setup
+- Connected and powered Raspberry Pi, iRobot Create2, and LIDAR A1.
+- Mounted the LIDAR optimally on the robot for unobstructed field of view.
+
+#### ROS Package Installation
+- Installed `gmapping`, `navigation`, `robot_localization`, and `amcl` packages.
+
+#### URDF Model Configuration
+- Configured and tested the URDF model including the LIDAR sensor.
+- Visualized the model using RViz on a laptop through X11 forwarding.
+
+#### Map Creation
+- Created a map using the LIDAR with `gmapping` by manually navigating the robot.
+- Saved the map using the `map_server` package.
+
+#### Navigation Stack Setup
+- Configured the `move_base` node with necessary parameters for path planning.
+- Set up `AMCL` for localization with adjusted parameters for the robot.
+- Configured `robot_localization` to fuse data from IMU, encoders, and LIDAR.
+- Developed launch files to initiate map server, AMCL, `move_base`, and sensor drivers.
+
+
+
+
 ### Links from Zubin
 
 How do we add LIDAR to a ROS robot? (youtube.com) https://www.youtube.com/watch?v=eJZXRncGaGM 
