@@ -1,6 +1,7 @@
 1. Setup the Hardware
 
 Ensure that your Raspberry Pi, iRobot Create2, and LIDAR A1 are properly connected and powered. The LIDAR should be securely mounted on the robot in a position that maximizes its field of view and minimizes obstructions from other parts of the robot.
+
 2. Install Necessary ROS Packages
 
 To implement navigation, you'll need several ROS packages. These typically include:
@@ -16,9 +17,19 @@ bash
 
 sudo apt-get install ros-noetic-gmapping ros-noetic-navigation ros-noetic-robot-localization ros-noetic-amcl
 
-3. Configure the Robot's URDF Model
+3. Configure the Robot's URDF Model - DOING
 
 Make sure you have a URDF model for your robot that includes the LIDAR sensor. This model tells ROS about the physical and sensor configuration of your robot, which is crucial for accurate localization and navigation.
+
+Paste from create2
+Add with gpt
+test using rviz, how to do it on laptop
+use X11
+Write launch file
+Test sucesssfully
+Added a lidar
+Good robot_description
+
 4. Create a Map of the Environment
 
 If you haven't created a map of the environment yet, you'll need to do so using the LIDAR and gmapping or slam_toolbox:
