@@ -1,5 +1,26 @@
 # Create 
 
+## 4.27 Update
+
+### Using Turtlebot3 Navigation Package to navigate Create2
+
+- Code in `create_robot/turtlebot3_navigation`
+- Change URDF file to
+  - adjust to format with turtlebot3 burger, such as make left_wheel's name same
+  - add rplidar
+- Write create_navigation.launch
+   - First bringup Create2 using create2 driver
+   - Start map server
+   - Start AMCL to calculate the position of robot from /scan data
+   - Start move_base
+   - Start rviz to do planning
+- For move base
+   - Using params in param folder
+
+- Create 2 in Rviz:
+- 
+ 
+
 ## 4.24 Update
 
 #### ROS Package Installation
