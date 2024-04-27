@@ -2,6 +2,13 @@
 
 ## 4.27 Update
 
+### TODO
+- [ ] Configure Lidar successfully
+- [ ] Fix map to base_link not found bug
+- [ ] Using navigation to run it using gix map
+- [ ] Make it able to navi in gix 2nd floor
+- [ ] Add controller to control movement
+
 ### Using Turtlebot3 Navigation Package to Navigate iRobot Create2
 
 This section details the modifications and setup required to use the Turtlebot3 navigation package for controlling the iRobot Create2 with an added RPLiDAR.
