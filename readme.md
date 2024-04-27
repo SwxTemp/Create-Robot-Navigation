@@ -30,7 +30,8 @@
 
 - Topic List:
 
-  ```
+
+```
 gixrobot11@gixrobot11-HP-ProBook-450-G6:~$ rostopic list
 /amcl/parameter_descriptions
 /amcl/parameter_updates
@@ -91,8 +92,8 @@ gixrobot11@gixrobot11-HP-ProBook-450-G6:~$ rostopic list
 /undock
 /vacuum_motor
 /wheeldrop
+```
 
-  ```
  
 
 ## 4.24 Update
