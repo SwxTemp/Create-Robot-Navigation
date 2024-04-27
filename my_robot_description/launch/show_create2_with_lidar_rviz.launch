@@ -1,0 +1,3 @@
+<launch>
+    <param name="robot_description" command="$(find xacro)/xacro --inorder $(find my_robot_description)/urdf/create2_with_lidar.urdf.xacro" />
+</launch>
