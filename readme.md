@@ -18,7 +18,72 @@
    - Using params in param folder
 
 - Create 2 in Rviz:
-- 
+
+- Topic List:
+
+  ```
+gixrobot11@gixrobot11-HP-ProBook-450-G6:~$ rostopic list
+/amcl/parameter_descriptions
+/amcl/parameter_updates
+/amcl_pose
+/battery/capacity
+/battery/charge
+/battery/charge_ratio
+/battery/charging_state
+/battery/current
+/battery/temperature
+/battery/voltage
+/bumper
+/check_led
+/clean_button
+/cmd_vel
+/day_button
+/debris_led
+/define_song
+/diagnostics
+/dock
+/dock_button
+/dock_led
+/hour_button
+/initialpose
+/ir_omni
+/joint_states
+/main_brush_motor
+/map
+/map_metadata
+/map_updates
+/minute_button
+/mode
+/move_base/DWAPlannerROS/global_plan
+/move_base/DWAPlannerROS/local_plan
+/move_base/NavfnROS/plan
+/move_base/current_goal
+/move_base/global_costmap/costmap
+/move_base/global_costmap/costmap_updates
+/move_base/goal
+/move_base/local_costmap/costmap
+/move_base/local_costmap/costmap_updates
+/move_base/local_costmap/footprint
+/move_base/recovery_status
+/move_base_simple/goal
+/odom
+/particlecloud
+/play_song
+/power_led
+/rosout
+/rosout_agg
+/scan
+/set_ascii
+/side_brush_motor
+/spot_button
+/spot_led
+/tf
+/tf_static
+/undock
+/vacuum_motor
+/wheeldrop
+
+  ```
  
 
 ## 4.24 Update
