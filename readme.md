@@ -2,22 +2,31 @@
 
 ## 4.27 Update
 
-### Using Turtlebot3 Navigation Package to navigate Create2
+### Using Turtlebot3 Navigation Package to Navigate iRobot Create2
 
-- Code in `create_robot/turtlebot3_navigation`
-- Change URDF file to
-  - adjust to format with turtlebot3 burger, such as make left_wheel's name same
-  - add rplidar
-- Write create_navigation.launch
-   - First bringup Create2 using create2 driver
-   - Start map server
-   - Start AMCL to calculate the position of robot from /scan data
-   - Start move_base
-   - Start rviz to do planning
-- For move base
-   - Using params in param folder
+This section details the modifications and setup required to use the Turtlebot3 navigation package for controlling the iRobot Create2 with an added RPLiDAR.
 
-- Create 2 in Rviz:
+#### Codebase Setup
+- **Location**: All modifications are made within the `create_robot/turtlebot3_navigation` directory.
+
+#### URDF Modifications
+- **Objective**: Adjust the URDF file to mimic the Turtlebot3 Burger setup and integrate RPLiDAR.
+  - Rename `left_wheel` and `right_wheel` to match Turtlebot3 standard naming conventions for compatibility.
+  - Add the RPLiDAR sensor to the URDF, ensuring proper mounting position and orientation.
+
+#### Launch File: `create_navigation.launch`
+- **Purpose**: Manage the startup sequence for robot navigation using ROS.
+  - **Step 1**: Initiate the Create2 robot using the `create2_driver`.
+  - **Step 2**: Launch the `map_server` to load the pre-existing map of the environment.
+  - **Step 3**: Start the `amcl` node, which uses the `/scan` data from RPLiDAR to estimate the robot's position within the map.
+  - **Step 4**: Launch the `move_base` node to handle path planning and obstacle avoidance.
+  - **Step 5**: Execute `rviz` with a pre-configured setup to visualize and plan the robot's movements.
+
+#### Configuration for `move_base`
+- **Files**: Utilize parameter files stored in the `param` folder to configure the `move_base` node.
+  - Parameters are tailored to match the dynamics and dimensions of the Create2 robot, adjusting settings such as maximum speed, acceleration, and obstacle safety distances.
+
+#### Visualization 
   ![pic](./imgs/1.png)
 
   ![pic](./imgs/2.png)
