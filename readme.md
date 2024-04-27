@@ -18,6 +18,15 @@
    - Using params in param folder
 
 - Create 2 in Rviz:
+  ![pic](./imgs/1.png)
+
+  ![pic](./imgs/2.png)
+
+  ![pic](./imgs/3.png)
+
+  ![pic](./imgs/4.png)
+
+
 
 - Topic List:
 
