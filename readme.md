@@ -9,9 +9,13 @@
 ### Installation Steps
 1. **Install Turtlebot3 Packages:** Ensure that the Turtlebot3 packages are installed on your system.
 
-2. **Clone Repository:**
+2. **Clone Repository**
 
 Clone the repository to your ROS workspace (`src` folder).
+
+```
+git clone https://github.com/SwxTemp/TECHIN517_Navigation.git
+```
 
 3. **Update USB Serial Port Names:**
 - Navigate to the following files:
