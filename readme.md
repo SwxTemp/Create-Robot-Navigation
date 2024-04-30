@@ -1,5 +1,26 @@
 # Create 
 
+## How to use
+
+1. Using Ubuntu 20.04 and ROS 1 Noetic
+2. Install turtlebot3 pakages
+3. git clone this repo under src folder
+4. Change USB serial port name in
+  1. `create_robot/create_bringup/config/default.yaml`
+  2. `rplidar_ros/launch/rplidar_a1.launch`
+  3. Note that it is normally one is USB1 and the other is USB0
+5. `catkin_make` under your ws folder
+6. Run
+  `roslaunch create_navigation create_navigation.launch`
+7. This will automatically do such things:
+  1. Run bringup for lidar
+  2. Run bringup for create2
+  3. Run Map Server
+  4. Run AMCL Node
+  5. Run Move base
+  6. Run Rviz
+
+
 ## 4.27 Update
 
 ### TODO
