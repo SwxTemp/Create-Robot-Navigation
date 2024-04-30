@@ -1,6 +1,46 @@
 # Create 
 
-## How to use
+## Usage Instructions
+
+### System Requirements
+- Ubuntu 20.04
+- ROS 1 Noetic
+
+### Installation Steps
+1. **Install Turtlebot3 Packages:** Ensure that the Turtlebot3 packages are installed on your system.
+
+2. **Clone Repository:**
+
+Clone the repository to your ROS workspace (`src` folder).
+
+3. **Update USB Serial Port Names:**
+- Navigate to the following files:
+  - `create_robot/create_bringup/config/default.yaml`
+  - `rplidar_ros/launch/rplidar_a1.launch`
+- Update the USB serial port names as needed. Typically, one is named USB1 and the other is named USB0.
+
+4. **Build Workspace:**
+
+Build your ROS workspace.
+
+### Running the Navigation System
+
+1. **Launch Navigation System:**
+  `roslaunch create_navigation create_navigation.launch`
+
+2. This launch command will automatically perform the following tasks:
+- Initialize the lidar
+- Start the Turtlebot3
+- Launch the Map Server
+- Run the AMCL (Adaptive Monte Carlo Localization) Node
+- Activate the Move Base
+- Launch Rviz for visualization
+
+
+
+
+
+<!-- ## How to use
 
 1. Using Ubuntu 20.04 and ROS 1 Noetic
 2. Install turtlebot3 pakages
@@ -18,7 +58,7 @@
   3. Run Map Server
   4. Run AMCL Node
   5. Run Move base
-  6. Run Rviz
+  6. Run Rviz -->
 
 
 ## 4.27 Update
