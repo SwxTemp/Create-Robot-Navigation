@@ -25,12 +25,19 @@ git clone https://github.com/SwxTemp/TECHIN517_Navigation.git
 
 4. **Build Workspace:**
 
+```
+catkin_make
+```
+
 Build your ROS workspace.
 
 ### Running the Navigation System
 
 1. **Launch Navigation System:**
-  `roslaunch create_navigation create_navigation.launch`
+
+```
+roslaunch create_navigation create_navigation.launch
+```
 
 2. This launch command will automatically perform the following tasks:
 - Initialize the lidar
