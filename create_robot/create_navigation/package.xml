@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>turtlebot3_navigation</name>
+  <name>create_navigation</name>
   <version>1.2.6</version>
   <description>
-    The turtlebot3_navigation provides roslaunch scripts for starting the navigation.
+    The create_navigation provides roslaunch scripts for starting the navigation.
   </description>
   <license>Apache 2.0</license>
   <author email="pyo@robotis.com">Pyo</author>
@@ -11,7 +11,7 @@
   <author email="kkjong@robotis.com">Gilbert</author>
   <author>Leon Jung</author>
   <maintainer email="willson@robotis.com">Will Son</maintainer>
-  <url type="website">http://wiki.ros.org/turtlebot3_navigation</url>
+  <url type="website">http://wiki.ros.org/create_navigation</url>
   <url type="emanual">http://turtlebot3.robotis.com</url>
   <url type="repository">https://github.com/ROBOTIS-GIT/turtlebot3</url>
   <url type="bugtracker">https://github.com/ROBOTIS-GIT/turtlebot3/issues</url>
@@ -19,5 +19,4 @@
   <exec_depend>amcl</exec_depend>
   <exec_depend>map_server</exec_depend>
   <exec_depend>move_base</exec_depend>
-  <exec_depend>turtlebot3_bringup</exec_depend>
 </package>
