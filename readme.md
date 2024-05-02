@@ -40,8 +40,8 @@ roslaunch create_navigation create_navigation.launch
 ```
 
 2. This launch command will automatically perform the following tasks:
-- Initialize the lidar
-- Start the Turtlebot3
+- Initialize the lidar a1
+- Start the iRobot Create2
 - Launch the Map Server
 - Run the AMCL (Adaptive Monte Carlo Localization) Node
 - Activate the Move Base
