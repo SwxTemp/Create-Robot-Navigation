@@ -1,0 +1,13 @@
+<launch>
+  <!-- <arg name="model" default="$(env TURTLEBOT3_MODEL)" doc="model type [burger, waffle, waffle_pi]"/> -->
+
+  <include file="$(find create_bringup)/launch/create_2.launch">
+    <!-- <arg name="model" value="$(arg model)"/> -->
+  </include>
+
+  <!-- Lidar -->
+  <include file="$(find rplidar_ros)/launch/rplidar_a1.launch">
+  </include>
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find create_gazebo)/rviz/create_gazebo_model.rviz"/>
+</launch>
