@@ -72,6 +72,25 @@ roslaunch create_navigation create_navigation.launch
   6. Run Rviz -->
 
 
+# Work Log
+
+## 5.13 Meeting with InOrbit Team
+
+- orbit平台提供什么功能，输入输出需要什么
+- 如何实现多机控制
+    - 两个Laptop分别控制两个树莓派连接机器人
+    - Inorbit系统连接两个Laptop
+- 我们只需要提供一些标准接口
+    - **目标位置（Move Base输入）**
+        
+        **话题名称**: **`/move_base_simple/goal`**
+        
+        **数据类型**: **`geometry_msgs/PoseStamped`**
+        
+        **描述**: 该话题发布机器人导航的目标位置，触发路径规划过程。
+        
+- 不需要提供开始启动的控制功能，由orbit控制
+
 ## 4.27 Update
 
 ### TODO
