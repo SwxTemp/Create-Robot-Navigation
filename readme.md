@@ -48,8 +48,21 @@ roslaunch create_navigation create_navigation.launch
 - Launch Rviz for visualization
 
 
+### Running the Simulation
+```
+roscore
+roslaunch create_gazebo create_world.launch
+roslaunch create_navigation create_navigation.launch map_file:=$HOME/map/gix_map_2f.yaml
+```
+- The default world model is `gix-2f` that you can get in world folder
 
+- The default map_file is `gix_map_2f.yaml` and `gix_map_2f.pgm`
 
+- Remember to change the map_file with your local file position
+
+- You can also use the following command to visualize robot in Rviz: `roslaunch create_gazebo create_gazebo_rviz.launch`
+
+- And then use teleop tool to control the robot: `roslaunch create_teleop create_teleop.launch`
 
 <!-- ## How to use
 
