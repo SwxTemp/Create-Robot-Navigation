@@ -25,11 +25,17 @@ git clone https://github.com/SwxTemp/TECHIN517_Navigation.git
 
 4. **Build Workspace:**
 
-```
-catkin_make
+```bash
+catkin build
 ```
 
 Build your ROS workspace.
+
+If you encounter any errors, try clean the workspace and build again:
+
+```bash
+catkin clean
+```
 
 ### Running the Navigation System
 
@@ -49,11 +55,16 @@ roslaunch create_navigation create_navigation.launch
 
 
 ### Running the Simulation
-```
+
+```bash
 roscore
+
 roslaunch create_gazebo create_world.launch
+
 roslaunch create_navigation create_navigation.launch map_file:=$HOME/map/gix_map_2f.yaml
+
 ```
+
 - The default world model is `gix-2f` that you can get in world folder
 
 - The default map_file is `gix_map_2f.yaml` and `gix_map_2f.pgm`
