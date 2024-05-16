@@ -1,0 +1,8 @@
+<launch>
+  <!-- Lidar -->
+  <include file="$(find rplidar_ros)/launch/rplidar_a1.launch"/>
+
+  <!-- Create 2 -->
+  <include file="$(find create_bringup)/launch/create_2.launch"/>
+  
+</launch>

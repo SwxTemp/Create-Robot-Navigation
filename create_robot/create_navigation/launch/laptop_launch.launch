@@ -1,0 +1,24 @@
+<launch>
+  <!-- Arguments -->
+  <arg name="model" default="waffle"/>
+  <arg name="map_file" default="$(find create_navigation)/maps/map.yaml"/>
+  <arg name="move_forward_only" default="false"/>
+
+  <!-- Map server -->
+  <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
+
+  <!-- AMCL -->
+  <include file="$(find create_navigation)/launch/amcl.launch"/>
+
+  <!-- move_base, considering the model type and other parameters -->
+  <include file="$(find create_navigation)/launch/move_base.launch">
+    <arg name="model" value="$(arg model)"/>
+    <arg name="move_forward_only" value="$(arg move_forward_only)"/>
+  </include>
+
+  <!-- rviz -->
+  <group>
+    <node pkg="rviz" type="rviz" name="rviz" required="true"
+          args="-d $(find create_navigation)/rviz/create_navigation.rviz"/>
+  </group>
+</launch>
