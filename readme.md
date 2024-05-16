@@ -54,7 +54,7 @@ roslaunch create_navigation create_navigation.launch
 - Launch Rviz for visualization
 
 
-### Running the Simulation
+## Running the Simulation
 
 ```bash
 roscore
@@ -78,6 +78,21 @@ roslaunch create_navigation create_navigation.launch map_file:=$HOME/map/gix_map
 - You can also use the following command to visualize robot in Rviz: `roslaunch create_gazebo create_gazebo_rviz.launch`
 
 - And then use teleop tool to control the robot: `roslaunch create_teleop create_teleop.launch`
+
+
+## How to use creat_slam to build map
+
+### In simulation
+- Open a world model: `roslaunch create_gazebo create_world.launch`
+- Run slam launch file: `roslaunch create_slam create_slam.launch slam_methods:=gmapping`
+- Control robot move: `roslaunch create_teleop create_teleop.launch`
+- Save the map: `rosrun map_server map_saver -f ~/path/to/save`
+
+### Use physical robot
+- Connect with the physical robot
+- Run slam launch file: `roslaunch create_slam create_slam.launch slam_methods:=gmapping`
+- Control robot move: `roslaunch create_teleop create_teleop.launch`
+- Save the map: `rosrun map_server map_saver -f ~/path/to/save`
 
 <!-- ## How to use
 

@@ -1,0 +1,28 @@
+<launch>
+  <!-- Arguments -->
+  <!-- <arg name="model" default="$(env TURTLEBOT3_MODEL)" doc="model type [burger, waffle, waffle_pi]"/> -->
+  <arg name="slam_methods" default="gmapping" doc="slam type [gmapping, cartographer, hector, karto, frontier_exploration]"/>
+  <arg name="configuration_basename" default="create_lds_2d.lua"/>
+  <arg name="open_rviz" default="true"/>
+
+  <!-- Create2 -->
+  <include file="$(find create_bringup)/launch/create_2.launch">
+    <!-- <arg name="model" value="$(arg model)" /> -->
+  </include>
+
+  <!-- Lidar -->
+  <include file="$(find rplidar_ros)/launch/rplidar_a1.launch">
+  </include>
+
+  <!-- SLAM: Gmapping, Cartographer, Hector, Karto, Frontier_exploration, RTAB-Map -->
+  <include file="$(find create_slam)/launch/create_$(arg slam_methods).launch">
+    <!-- <arg name="model" value="$(arg model)"/> -->
+    <arg name="configuration_basename" value="$(arg configuration_basename)"/>
+  </include>
+
+  <!-- rviz -->
+  <group if="$(arg open_rviz)"> 
+    <node pkg="rviz" type="rviz" name="rviz" required="true"
+          args="-d $(find create_slam)/rviz/create_$(arg slam_methods).rviz"/>
+  </group>
+</launch>
