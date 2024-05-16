@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(create_gazebo)
+project(create_slam)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -8,16 +8,9 @@ project(create_gazebo)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  gazebo_ros
-  geometry_msgs
-  nav_msgs
   roscpp
   sensor_msgs
-  std_msgs
-  tf
 )
-
-find_package(gazebo REQUIRED)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -76,7 +69,7 @@ find_package(gazebo REQUIRED)
 ## Generate added messages and services with any dependencies listed here
 # generate_messages(
 #   DEPENDENCIES
-#   geometry_msgs#   nav_msgs#   sensor_msgs#   std_msgs
+#   sensor_msgs
 # )
 
 ################################################
@@ -110,31 +103,25 @@ find_package(gazebo REQUIRED)
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
  INCLUDE_DIRS include
- CATKIN_DEPENDS gazebo_ros geometry_msgs nav_msgs roscpp sensor_msgs std_msgs tf
- DEPENDS GAZEBO
- LIBRARIES $(GAZEBO_LIBRARIES)
+#  LIBRARIES create_slam
+ CATKIN_DEPENDS roscpp sensor_msgs
 #  DEPENDS system_lib
 )
 
 ###########
 ## Build ##
 ###########
-link_directories(${GAZEBO_LIBRARY_DIRS})
-
-include_directories(
-  include
-  ${catkin_INCLUDE_DIRS}
-  ${GAZEBO_INCLUDE_DIRS}
-)
-
 
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
-
+include_directories(
+  include
+  ${catkin_INCLUDE_DIRS}
+)
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/create_gazebo.cpp
+#   src/${PROJECT_NAME}/create_slam.cpp
 # )
 
 ## Add cmake target dependencies of the library
@@ -145,7 +132,7 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/create_gazebo_node.cpp)
+# add_executable(${PROJECT_NAME}_node src/create_slam_node.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -162,9 +149,25 @@ include_directories(
 #   ${catkin_LIBRARIES}
 # )
 
+add_executable(flat_world_imu_node src/flat_world_imu_node.cpp)
+add_dependencies(flat_world_imu_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(flat_world_imu_node ${catkin_LIBRARIES})
+
 #############
 ## Install ##
 #############
+
+install(TARGETS flat_world_imu_node
+  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
+install(DIRECTORY include/${PROJECT_NAME}/
+  DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+)
+
+install(DIRECTORY bag config launch rviz
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)
 
 # all install targets should use catkin DESTINATION variables
 # See http://ros.org/doc/api/catkin/html/adv_user_guide/variables.html
@@ -209,7 +212,7 @@ include_directories(
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_create_gazebo.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_create_slam.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
