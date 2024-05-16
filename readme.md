@@ -58,9 +58,13 @@ roslaunch create_navigation create_navigation.launch
 
 ```bash
 roscore
+```
 
+```bash
 roslaunch create_gazebo create_world.launch
+```
 
+```bash
 roslaunch create_navigation create_navigation.launch map_file:=$HOME/map/gix_map_2f.yaml
 
 ```
