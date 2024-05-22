@@ -4,10 +4,14 @@
   <arg name="map_file" default="$(find create_navigation)/maps/map.yaml"/>
   <arg name="open_rviz" default="true"/>
   <arg name="move_forward_only" default="false"/>
+  <arg name="scan_topic" default="/filtered_scan"/>
 
   <!-- Lidar -->
   <include file="$(find rplidar_ros)/launch/rplidar_a1.launch">
   </include>
+
+  <!-- Lidar Filter -->
+  <node pkg="create_navigation" type="scan_filter.py" name="scan_filter" output="screen"/>
 
   <!-- Create 2 -->
   <include file="$(find create_bringup)/launch/create_2.launch">
@@ -17,12 +21,15 @@
   <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
 
   <!-- AMCL -->
-  <include file="$(find create_navigation)/launch/amcl.launch"/>
+  <include file="$(find create_navigation)/launch/amcl.launch">
+    <arg name="scan_topic" value="$(arg scan_topic)"/>
+  </include>
 
   <!-- move_base -->
   <include file="$(find create_navigation)/launch/move_base.launch">
     <arg name="model" value="$(arg model)" />
     <arg name="move_forward_only" value="$(arg move_forward_only)"/>
+    <remap from="scan" to="/filtered_scan"/>
   </include>
 
   <!-- rviz -->
