@@ -1,4 +1,4 @@
-image: /home/haokunfeng/map/gix_map_2f_0523.pgm
+image: /home/gixrobot11/create_ws/src/TECHIN517_Navigation/create_robot/create_navigation/maps/gix_map_2f_0523.pgm
 resolution: 0.050000
 origin: [-10.000000, -54.800000, 0.000000]
 negate: 0

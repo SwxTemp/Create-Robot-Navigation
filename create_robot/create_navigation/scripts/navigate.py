@@ -48,12 +48,15 @@ def send_goal(x, y, z, w):
 
 if __name__ == '__main__':
     try:
-        x = float(input("Enter x coordinate: "))
-        y = float(input("Enter y coordinate: "))
-        # z = float(input("Enter z coordinate (orientation): "))
-        # w = float(input("Enter w coordinate (orientation): "))
-        z = 0.0
-        w = 1.0
+        x = 16.1278
+        y = -32.83
+
+        # jiang zhuo
+        # x = 25.57
+        # y = -25.95
+        
+        z = -1.0
+        w = 0.0
         result = send_goal(x, y, z, w)
         if result:
             rospy.loginfo("Navigation success!")
