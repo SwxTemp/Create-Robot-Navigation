@@ -7,9 +7,13 @@
 - ROS 1 Noetic
 
 ### Installation Steps
-1. **Install Turtlebot3 Packages:** Ensure that the Turtlebot3 packages are installed on your system.
+1. **Install Turtlebot3 & Rplidar Packages:** Ensure that the Turtlebot3 and rplidar are installed on your system.
 
-2. **Clone Repository**
+   https://github.com/Slamtec/rplidar_ros
+
+   https://github.com/ROBOTIS-GIT/turtlebot3/tree/noetic-devel 
+
+3. **Clone Repository**
 
 Clone the repository to your ROS workspace (`src` folder).
 
