@@ -18,7 +18,7 @@
 Clone the repository to your ROS workspace (`src` folder).
 
 ```
-git clone https://github.com/SwxTemp/TECHIN517_Navigation.git
+git clone https://github.com/SwxTemp/Create-Robot-Navigation.git
 ```
 
 3. **Update USB Serial Port Names:**
