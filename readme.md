@@ -1,4 +1,4 @@
-# Navigation Stack for Create Robot and Rplidar
+# Navigation Stack for iRobot Create 2 with Rplidar a1
 
 ## Usage Instructions
 
